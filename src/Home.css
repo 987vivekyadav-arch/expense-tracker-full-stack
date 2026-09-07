@@ -1,0 +1,625 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#03050a;
+  font-family:Arial, sans-serif;
+  color:white;
+  
+}
+
+
+
+
+.home-page{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 50% 0%,#8fbdf5 0%,#1a2a52 42%,#010206 100%);
+
+  padding:25px 20px 110px;
+
+  position:relative;
+  overflow:hidden;
+}
+
+
+/* BLUE GLOW */
+
+.home-page:before{
+  content:"";
+
+  position:fixed;
+
+  width:450px;
+  height:450px;
+
+  top:-180px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  background:#006eff;
+
+  opacity:.13;
+
+  filter:blur(110px);
+
+  pointer-events:none;
+}
+
+
+/* HEADER */
+
+.home-header{
+  text-align:center;
+  position:relative;
+  z-index:1;
+
+  margin-bottom:28px;
+}
+
+
+.product-link{
+  color:#081e31;
+
+  text-decoration:none;
+display: none;
+  font-size:13px;
+
+  font-weight:bold;
+
+  letter-spacing:2px;
+
+  text-shadow:
+    0 0 8px rgba(40,150,255,.8);
+}
+
+.title-area h1{
+  font-size:44px;
+
+  margin:18px 0 8px;
+
+  letter-spacing:-1px;
+
+  text-shadow:
+    0 0 8px rgba(60,160,255,.4);
+    margin-bottom: 20px;
+}
+
+.title-area p{
+  margin:3px 0;
+
+  color:#0c2c58;
+
+  font-size:17px;
+}
+
+
+/* BALANCE CARD */
+
+.balance-card{
+  max-width:850px;
+
+  margin:auto;
+
+  padding:25px;
+
+  border-radius:25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(12,23,39,.95),
+      rgba(4,9,17,.95)
+    );
+
+  border:1px solid #168cff;
+
+  box-shadow:
+    0 0 8px rgba(0,130,255,.9),
+    0 0 25px rgba(0,110,255,.35),
+    inset 0 0 25px rgba(0,120,255,.08);
+
+  position:relative;
+  z-index:1;
+}
+
+.balance-top{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+}
+
+.balance-card h2{
+  margin:0 0 8px;
+
+  color:#8c9bad;
+
+  font-size:18px;
+
+  font-weight:normal;
+}
+
+.balance-number{
+  margin:0;
+
+  font-size:38px;
+
+  font-weight:bold;
+
+  color:white;
+
+  text-shadow:
+    0 0 10px rgba(80,170,255,.25);
+}
+
+.month-box{
+  padding:12px 17px;
+
+  border-radius:12px;
+
+  background:#0b1421;
+
+  border:1px solid #23415f;
+
+  color:#b8c4d1;
+
+  font-size:13px;
+}
+
+
+/* SUMMARY */
+
+.summary{
+  max-width:850px;
+
+  margin:18px auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:15px;
+
+  position:relative;
+
+  z-index:1;
+}
+
+.summary-box{
+  padding:18px;
+
+  text-align:center;
+
+  border-radius:18px;
+
+  background:#070d16;
+
+  border:1px solid #123d68;
+
+  box-shadow:
+    inset 0 0 15px rgba(0,100,255,.05);
+}
+
+.summary-box h3{
+  margin:0 0 8px;
+
+  color:#78899d;
+
+  font-size:14px;
+}
+
+.summary-box p{
+  margin:0;
+
+  font-size:22px;
+
+  font-weight:bold;
+
+  color:#55adff;
+
+  text-shadow:
+    0 0 8px rgba(30,140,255,.45);
+}
+
+
+/* TRANSACTIONS */
+
+.list-section{
+  max-width:850px;
+
+  margin:28px auto 0;
+
+  position:relative;
+
+  z-index:1;
+}
+
+.list-title{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:8px;
+}
+
+.list-title h2{
+  margin:0;
+
+  font-size:21px;
+}
+
+.list-title span{
+  color:#4caaff;
+
+  font-size:14px;
+}
+
+
+/* LIST */
+
+.lists{
+  background:#050a12;
+
+  border:1px solid #12365c;
+
+  border-radius:22px;
+
+  padding:5px 18px;
+
+  box-shadow:
+    0 0 12px rgba(0,100,255,.18),
+    inset 0 0 20px rgba(0,100,255,.04);
+}
+
+.transaction{
+  min-height:78px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:15px;
+
+  border-bottom:1px solid #15263b;
+}
+
+.transaction:last-child{
+  border-bottom:none;
+}
+
+
+/* ICON */
+
+.transaction-icon{
+  width:50px;
+  height:50px;
+
+  min-width:50px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:#06182d;
+
+  border:1px solid #138cff;
+
+  color:#54b0ff;
+
+  font-size:20px;
+
+  font-weight:bold;
+
+  box-shadow:
+    0 0 10px rgba(0,130,255,.35);
+}
+
+
+/* DETAILS */
+
+.transaction-details{
+  flex:1;
+
+  min-width:0;
+}
+
+.food-name{
+  color:#f3f6fa;
+
+  font-size:16px;
+
+  font-weight:bold;
+
+  margin-bottom:5px;
+
+  overflow:hidden;
+
+  text-overflow:ellipsis;
+
+  white-space:nowrap;
+}
+
+.transaction-date{
+  color:#6e7e92;
+
+  font-size:13px;
+}
+
+
+/* PRICE */
+
+.transaction-price{
+  color:#55adff;
+
+  font-size:17px;
+
+  font-weight:bold;
+
+  text-shadow:
+    0 0 7px rgba(30,140,255,.35);
+}
+
+
+/* FLOATING + */
+
+.floating-add{
+  position:fixed;
+
+  right:30px;
+
+  bottom:80px;
+
+  z-index:5;
+}
+
+.floating-add button{
+  width:62px;
+
+  height:62px;
+
+  border-radius:50%;
+
+  border:1px solid #32a0ff;
+
+  background:#0878e8;
+
+  color:white;
+
+  font-size:35px;
+
+  line-height:1;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 0 10px rgba(0,145,255,1),
+    0 0 30px rgba(0,110,255,.5);
+}
+
+.floating-add button:hover{
+  box-shadow:
+    0 0 15px rgba(0,160,255,1),
+    0 0 40px rgba(0,120,255,.6);
+}
+
+
+/* BOTTOM NAVIGATION */
+
+.bottom-navigation{
+  position:fixed;
+
+  left:0;
+
+  right:0;
+
+  bottom:0;
+
+  height:72px;
+
+  background:rgba(3,7,13,.96);
+
+  border-top:1px solid #12365a;
+
+  box-shadow:
+    0 -5px 25px rgba(0,90,180,.12);
+
+  display:flex;
+
+  justify-content:space-around;
+
+  align-items:center;
+
+  z-index:4;
+}
+
+.nav-item{
+  text-decoration:none;
+
+  color:#667589;
+
+  text-align:center;
+
+  font-size:12px;
+
+  min-width:70px;
+}
+
+.nav-item div{
+  font-size:25px;
+
+  margin-bottom:3px;
+}
+
+.nav-item span{
+  font-size:12px;
+}
+
+.nav-item.active{
+  color:#4daeff;
+
+  text-shadow:
+    0 0 8px rgba(30,145,255,.7);
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .home-page{
+    padding:18px 12px 100px;
+  }
+
+  .title-area h1{
+    font-size:36px;
+
+    margin-top:15px;
+  }
+
+  .title-area p{
+    font-size:13px;
+  }
+
+  .balance-card{
+    padding:20px;
+
+    border-radius:22px;
+  }
+
+  .balance-number{
+    font-size:32px;
+  }
+
+  .balance-card h2{
+    font-size:16px;
+  }
+
+  .month-box{
+    padding:10px 12px;
+
+    font-size:11px;
+  }
+
+  .summary{
+    gap:10px;
+  }
+
+  .summary-box{
+    padding:15px 8px;
+  }
+
+  .summary-box h3{
+    font-size:12px;
+  }
+
+  .summary-box p{
+    font-size:19px;
+  }
+
+  .list-section{
+    margin-top:24px;
+  }
+
+  .list-title h2{
+    font-size:18px;
+  }
+
+  .list-title span{
+    font-size:12px;
+  }
+
+  .lists{
+    padding:4px 12px;
+
+    border-radius:18px;
+  }
+
+  .transaction{
+    min-height:72px;
+
+    gap:10px;
+  }
+
+  .transaction-icon{
+    width:42px;
+
+    min-width:42px;
+
+    height:42px;
+
+    font-size:16px;
+  }
+
+  .food-name{
+    font-size:14px;
+  }
+
+  .transaction-date{
+    font-size:11px;
+  }
+
+  .transaction-price{
+    font-size:14px;
+  }
+
+  .floating-add{
+    right:18px;
+
+    bottom:88px;
+  }
+
+  .floating-add button{
+    width:56px;
+
+    height:56px;
+
+    font-size:30px;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:400px){
+
+  .balance-top{
+    align-items:flex-start;
+  }
+
+  .balance-number{
+    font-size:28px;
+  }
+
+  .month-box{
+    padding:8px 9px;
+  }
+
+  .transaction{
+    gap:8px;
+  }
+
+  .transaction-icon{
+    width:38px;
+
+    min-width:38px;
+
+    height:38px;
+  }
+
+  .transaction-price{
+    font-size:13px;
+  }
+
+}
