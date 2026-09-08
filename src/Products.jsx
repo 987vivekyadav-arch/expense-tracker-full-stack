@@ -232,7 +232,9 @@ body:JSON.stringify({food:food,date:date,expense:expense})
                   </div>
 
                   <div className="transaction-date">
-                    {item.date}
+                    {new
+                    Date(item.date).toLocaleDateString("en-GB")
+                    }
                   </div>
 
                 </div>
