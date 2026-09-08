@@ -2,7 +2,7 @@
   "background_color": "#ffffff",
   "dir": "ltr",
   "display": "standalone",
-  "name": "Spendly",
+  "name": "Spendly-Simple Expense Tracker",
   "orientation": "any",
   "scope": "/",
   "short_name": "Spendly",
