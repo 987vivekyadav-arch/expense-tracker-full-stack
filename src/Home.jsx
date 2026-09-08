@@ -122,7 +122,9 @@ const Total=Number(saving)-Number(totalExpense)
                   </div>
 
                   <div className="transaction-date">
-                    {item.date}
+                     {new
+                    Date(item.date).toLocaleDateString("en-GB")
+                    }
                   </div>
 
                 </div>
