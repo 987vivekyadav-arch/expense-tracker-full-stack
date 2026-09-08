@@ -14,7 +14,7 @@ expense,
 setExpense,}){
 
 function Delete(clickedIndex){ 
- fetch("https://expense-tracker-full-stack-twwt.onrender.com/lists/"+lists[clickedIndex]._id,
+ fetch("https://expense-tracker-full-stack-twvt.onrender.com/lists/"+lists[clickedIndex]._id,
 {
 method:"DELETE",
 
@@ -37,7 +37,7 @@ method:"DELETE",
 }
 
 function Save(editIndex){
-  fetch("https://expense-tracker-full-stack-twwt.onrender.com/lists/"+lists[editIndex]._id,
+  fetch("https://expense-tracker-full-stack-twvt.onrender.com/lists/"+lists[editIndex]._id,
 {
 method:"PUT",
 headers:{"Content-Type":"application/json"},
@@ -79,7 +79,7 @@ setFood("")
 const[editIndex,setEditIndex]=React.useState(null)
 
 React.useEffect(function(){
-  fetch("https://expense-tracker-full-stack-twwt.onrender.com/lists")
+  fetch("https://expense-tracker-full-stack-twvt.onrender.com/lists")
   .then(function(response){
     return response.json()
   })
@@ -182,7 +182,7 @@ React.useEffect(function(){
 
               else
               {
-                fetch("https://expense-tracker-full-stack-twwt.onrender.com/lists",
+                fetch("https://expense-tracker-full-stack-twvt.onrender.com/lists",
 {
 method:"POST",
 headers:{"Content-Type":"application/json"},
