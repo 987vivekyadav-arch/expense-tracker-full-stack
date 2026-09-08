@@ -9,18 +9,12 @@
   "start_url": "/",
   "theme_color": "#ffffff",
   "icons": [
-    {
-      "src": "https://expense-tracker-full-stack-gray.vercel.app/favicon.svg",
-      "type": "image/svg+xml",
-      "isSquare": false,
-      "isPng": false,
-      "isWebp": false,
-      "isJpg": false,
-      "width": 0,
-      "is512x512": false,
-      "is256x256": false,
-      "is192x192": false
-    }
-  ],
+  {
+    "src": "/spendly.png",
+    "type": "image/png",
+    "sizes": "1254x1254",
+    "purpose": "any"
+  }
+],
   "lang": "en"
 }
